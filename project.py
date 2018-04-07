@@ -10,7 +10,7 @@ import time
 import sys
 
 username = open("post.txt","r").read()
-driver=webdriver.Chrome("C:/chromedriver.exe")
+driver=webdriver.Chrome("/chromedriver.exe")
 driver.get("https://www.instagram.com/"+username+"/")                                        #Replacement
 p='//*[@id="react-root"]/section/main'
 
@@ -31,7 +31,7 @@ zzz=[ee.get_attribute('outerHTML') for ee in eee]
 zzz=str(zzz)
 zzz=emoji.emojize(zzz)
 
-dsav=open("D:/proj/rwdata.txt",'w')                                                    #Location of Raw data
+dsav=open("/rwdata.txt",'w')                                                    #Location of Raw data
 dsav.write(zzz)
 dsav.close()
 wc=list()
